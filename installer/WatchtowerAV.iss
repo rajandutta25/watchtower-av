@@ -100,7 +100,7 @@ end;
 procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
 begin
   if CurUninstallStep = usPostUninstall then
-    if MsgBox('Also delete quarantined files and custom signatures/rules?',
-              mbConfirmation, MB_YESNO) = IDYES then
+    if SuppressibleMsgBox('Also delete quarantined files and custom signatures/rules?',
+              mbConfirmation, MB_YESNO, IDNO) = IDYES then
       DelTree(ExpandConstant('{commonappdata}\WatchtowerAV'), True, True, True);
 end;

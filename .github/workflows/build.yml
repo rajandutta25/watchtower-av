@@ -16,6 +16,7 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -57,13 +58,16 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "ISCC failed" }
 
       - name: Test silent install / uninstall
+        timeout-minutes: 5
         shell: pwsh
         run: |
           $setup = Get-ChildItem dist\WatchtowerAV-Setup-*.exe | Select-Object -First 1
           Start-Process $setup.FullName -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /TASKS=desktopicon" -Wait
           & "${env:ProgramFiles}\Watchtower AV\watchtower.exe" info
           if ($LASTEXITCODE -ne 0) { throw "installed CLI failed" }
-          Start-Process "${env:ProgramFiles}\Watchtower AV\unins000.exe" -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES" -Wait
+          Start-Process "${env:ProgramFiles}\Watchtower AV\unins000.exe" -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" -Wait
+          Start-Sleep 5
+          if (Test-Path "${env:ProgramFiles}\Watchtower AV\watchtower.exe") { throw "uninstall left files behind" }
 
       - uses: actions/upload-artifact@v4
         with:
