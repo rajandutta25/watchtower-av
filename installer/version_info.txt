@@ -7,7 +7,7 @@ VSVersionInfo(
       StringStruct('FileDescription', 'Watchtower AV - free open-source antivirus'),
       StringStruct('FileVersion', '0.1.0'),
       StringStruct('InternalName', 'WatchtowerAV'),
-      StringStruct('LegalCopyright', 'Copyright (C) 2026 Rajan Dutta and contributors. GPL-3.0'),
+      StringStruct('LegalCopyright', 'Copyright (C) 2026 Rajan (rajandutta25) and contributors. GPL-3.0'),
       StringStruct('ProductName', 'Watchtower AV'),
       StringStruct('ProductVersion', '0.1.0')])]),
     VarFileInfo([VarStruct('Translation', [1033, 1200])])

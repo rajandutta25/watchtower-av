@@ -76,7 +76,7 @@ Watchtower AV is free software, licensed under the **GNU General Public License 
 You may use, study, share and modify it. If you distribute a modified version, you must publish its
 source code under the same license, so Watchtower and its derivatives stay open source forever.
 
-Copyright (C) 2026 Rajan Dutta and contributors.
+Copyright (C) 2026 Rajan (@rajandutta25) and contributors.
 
 ## Supporting the project
 
