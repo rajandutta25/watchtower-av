@@ -1,6 +1,6 @@
 # 🛡 Watchtower AV
 
-Free, open-source antivirus for Windows (MIT). Stage 1 of a next-generation open EDR.
+Free, open-source antivirus for Windows (GPL-3.0). Non-commercial community project — no paid tiers, no ads, no data selling. Stage 1 of a next-generation open EDR.
 
 ## Features (v0.1)
 
@@ -69,3 +69,17 @@ Download the EICAR test file from https://www.eicar.org/download-anti-malware-te
 ## Limitations
 
 This is a user-mode scanner: it scans files after they are written, not before they execute, and it can be terminated by malware running as admin. Use it alongside Microsoft Defender, not instead of it, until the service/driver stages land.
+
+## License
+
+Watchtower AV is free software, licensed under the **GNU General Public License v3.0** (see `LICENSE`).
+You may use, study, share and modify it. If you distribute a modified version, you must publish its
+source code under the same license, so Watchtower and its derivatives stay open source forever.
+
+Copyright (C) 2026 Rajan Dutta and contributors.
+
+## Supporting the project
+
+Watchtower AV is a non-commercial community project. There will never be a paid edition, ads or data collection.
+Optional donations (the **Sponsor** button on GitHub) go only toward running costs, mainly the
+EV certificate needed for Microsoft to sign the future kernel driver. Spending will be published.

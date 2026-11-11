@@ -139,7 +139,7 @@ class App(tk.Tk):
     # ----------------------------------------------------------- actions
     def refresh_info(self):
         self.info.config(text=(
-            f"{config.APP_NAME} {config.VERSION}  —  free & open source (MIT)\n\n"
+            f"{config.APP_NAME} {config.VERSION}  —  free & open source (GPL-3.0)\n\n"
             f"Hash signatures : {self.scanner.sigdb.count():,}\n"
             f"YARA rules      : {self.scanner.yara.rule_count}\n"
             f"Data folder     : {config.DATA_DIR}\n"
